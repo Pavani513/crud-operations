@@ -3,12 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Manager</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #D0E8C5;
+    }
+    .container {
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      text-align: center;
+      width: 350px;
+    }
+    #enterData {
+      width: 50%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #tasks {
+      padding: 0;
+      margin: 0;
+    }
+    #tasks li {
+      margin: 10px 0;
+      padding: 10px;
+      background: #f9f9f9;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ddd;
+    }
+    button {
+      border: none;
+      padding: 7px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button.edit {
+      background-color: lightblue;
+      color: #000;
+    }
+    button.delete {
+      background-color: red;
+      color: #fff;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+    </style>
 </head>
-<body>
-    <input type="text" id="enterData">
-    <button onclick="addTask()">ADDTASK</button>
-    <div id="tasks"></div>
+    <body>
+        <div class="container">
+          <h1>Task Manager</h1>
+          <input type="text" id="enterData" placeholder="Enter a task" />
+          <button onclick="addTask()">Add Task</button>
+          <ul id="tasks"></ul>
+        </div>
     <script src="crud.js"></script>
 </body>
 </html>
